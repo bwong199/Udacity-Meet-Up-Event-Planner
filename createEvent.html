@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  </head>
+
+<body>
+	<div class="container">
+		<h1> Create Event </h1>
+		<a href="events.html">Main</a>
+    <br>
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="event">Event:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="event" placeholder="Enter name of event">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="eventType">Event Type:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="eventType" placeholder="Enter type of event">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="eventHost">Event Host:</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" id="eventHost" placeholder="Enter host of event">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="startTime">Start Time:</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" id="startTime" placeholder="Enter event starting time">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="endTime">End Time:</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" id="endTime" placeholder="Enter event ending time">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="guestList">Guest List:</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" id="guestList" placeholder="Enter guest list">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="location">Location</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" id="location" placeholder="Enter location">
+        </div>
+      </div>
+      <div class="form-group"> 
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" id="createEventButton" class="btn btn-default">Submit</button>
+        </div>
+      </div>
+    </form>
+	</div>
+	<script>
+		$(document).ready(function(){
+        var myFirebaseRef = new Firebase("https://udacity-event-planne.firebaseio.com/");
+       
+        $("#createEventButton").click(function(event){
+            event.preventDefault();
+            // console.log('hello world');
+            var event = $('#event').val();
+            var eventType = $('#eventType').val();
+            var eventHost = $('#eventHost').val();
+            var startTime = $('#startTime').val();
+            var endTime = $('#endTime').val();
+            var guestList = $('#guestList').val();
+            var location = $('#location').val();
+            console.log(event + eventType + eventHost + startTime + endTime + guestList + location);
+          // // Login Users
+          
+            myFirebaseRef.child("event").set({
+              event: event,
+              eventType: eventType,
+              eventHost: eventHost, 
+              startTime: startTime, 
+              endTime, endTime, 
+              guestList, guestList, 
+              location, location
+            });
+        });
+		});
+
+	</script>
+</body>
+</html>
