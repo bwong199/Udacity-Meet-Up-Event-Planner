@@ -17,7 +17,7 @@ $(document).ready(function(){
 		  if (error) {
 		    console.log("Error creating user:", error);
 
-		    $("#alert").append("Error creating user:" + error);
+		    $("#alert").html("Error creating user:" + error);
 	
 		  } else {
 		    console.log("Successfully created user account with uid:", userData.uid);

@@ -19,7 +19,7 @@ $(document).ready(function(){
 		}, function(error, authData) {
 		  if (error) {
 		    console.log("Login Failed!", error);
-		    $("#alert").append("Error creating user:" + error);
+		    $("#alert").html("Error creating user:" + error);
 		  } else {
 		    console.log("Authenticated successfully with payload:", authData);
 		    window.location.href="events.html";
