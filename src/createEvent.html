@@ -16,6 +16,7 @@
 <body>
 	<div class="container">
 		<h1> Create Event </h1>
+    <a href="index.html">Log off</a>
     <br>
     <p id="alert"> </p> 
 		<a href="events.html">Show Listed Events</a>
@@ -24,36 +25,69 @@
       <div class="form-group">
         <label class="control-label col-sm-2" for="event">Event:</label>
         <div class="col-sm-10">
+          <p id="eventAlert"> </p>  
           <input type="text"  class="form-control" id="event" placeholder="Enter name of event" autofocus required />
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="eventType">Event Type:</label>
         <div class="col-sm-10">
-          <input type="text" required class="form-control" id="eventType" placeholder="Enter type of event" required />
+          <p id="eventTypeAlert"> </p> 
+          <input type="text" required class="form-control" id="eventType" placeholder="Enter type of event" required list="eventTypes" />
+          <datalist id="eventTypes">
+            <option values="conferences">Conferences</option> 
+            <option values="seminars">Seminars</option> 
+            <option values="meetings">Meetings</option> 
+            <option values="team_Building_Events">Team Building Events</option>
+            <option values="trade_Shows ">Trade Shows </option> 
+            <option values="business_Dinners">Business Dinners</option> 
+            <option values="golf_Events">Golf Events</option> 
+            <option values="press_Conferences">Press Conferences</option>
+            <option values="networking_Events">Networking Events</option> 
+            <option values="press_Conferences">Press Conferences</option> 
+            <option values="incentive_Travel">Incentive Travel</option> 
+            <option values="opening_Ceremonies">Opening Ceremonies</option> 
+            <option values="theme_Parties">Theme Parties</option> 
+            <option values="vip_Events">VIP Events</option>
+            <option values="trade_Fairs">Trade Fairs</option>
+            <option values="shareholder_Meetings ">Shareholder Meetings </option>
+            <option values="award_Ceremonies ">Award Ceremonies </option>
+            <option values="incentive_Events">Incentive Events</option>
+            <option values="executive_Retreats">Executive Retreats </option>
+            <option values="board_Meetings">Board Meetings</option>
+            <option values="weddings">Weddings</option> 
+            <option values="birthdays">Birthdays</option> 
+            <option values="wedding_Anniversaries ">Wedding Anniversaries</option> 
+            <option values="family_Events">Family Events</option>    
+          </datalist>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="eventHost">Event Host:</label>
         <div class="col-sm-10"> 
-          <input type="text" class="form-control" id="eventHost" placeholder="Enter host of event" required />
+          <p id="eventHostAlert"> </p> 
+          <input type="text" class="form-control" id="eventHost" placeholder="Enter host of event" required  />
+
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="startTime">Start Time:</label>
         <div class="col-sm-10"> 
-          <input type="text" class="form-control" id="startTime" placeholder="Enter event starting time" required />
+          <p id="startTimeAlert"> </p> 
+          <input type="time" class="form-control" id="startTime" placeholder="Enter event starting time" required />
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="endTime">End Time:</label>
         <div class="col-sm-10"> 
-          <input type="text" class="form-control" id="endTime" placeholder="Enter event ending time" required />
+          <p id="endTimeAlert"> </p> 
+          <input type="time" class="form-control" id="endTime" placeholder="Enter event ending time" required />
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="guestList">Guest List:</label>
-        <div class="col-sm-10"> 
+        <div class="col-sm-10">
+          <p id="guestListAlert"> </p> 
           <input type="text" class="form-control" id="guestList" placeholder="Enter guest list" required />
         </div>
       </div>

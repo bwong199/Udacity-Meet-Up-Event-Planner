@@ -1,8 +1,78 @@
 $(document).ready(function(){
     var myFirebaseRef = new Firebase("https://udacity-event-planne.firebaseio.com/");
 
-   $("input").focusout(function(){
-      if($("#event").val().length < 1 | 
+ 
+
+   
+
+   // $("#event").keyup(function(){
+   //    if($("#event").val().length < 1 
+   //      ){
+   //      $("#eventAlert").html("Event name cannot be blank");
+   //      $("button").prop("disabled", true);
+   //    } else {
+   //      $("#eventAlert").html(" ");
+   //      $("button").prop("disabled", false);
+   //    }
+   // });
+
+   //  $("#eventType").keyup(function(){
+   //    if($("#eventType").val().length < 1 
+   //      ){
+   //      $("#eventTypeAlert").html("Event Type cannot be blank");
+   //      $("button").prop("disabled", true);
+   //    } else {
+   //      $("#eventTypeAlert").html(" ");
+   //      $("button").prop("disabled", false);
+   //    }
+   // });
+
+   //  $("#eventHost").keyup(function(){
+   //    if($("#eventHost").val().length < 1 
+   //      ){
+   //      $("#eventHostAlert").html("Event Host cannot be blank");
+   //      $("button").prop("disabled", true);
+   //    } else {
+   //      $("#eventHostAlert").html(" ");
+   //      $("button").prop("disabled", false);
+   //    }
+   // });
+
+   //  $("#startTime").keyup(function(){
+   //    if($("#startTime").val().length < 1 
+   //      ){
+   //      $("#startTimeAlert").html("Start time cannot be blank");
+   //      $("button").prop("disabled", true);
+   //    } else {
+   //      $("#startTimeAlert").html(" ");
+   //      $("button").prop("disabled", false);
+   //    }
+   // });
+
+   //  $("#endTime").keyup(function(){
+   //    if($("#endTime").val().length < 1 
+   //      ){
+   //      $("#endTimeAlert").html("Start time cannot be blank");
+   //      $("button").prop("disabled", true);
+   //    } else {
+   //      $("#endTimeAlert").html(" ");
+   //      $("button").prop("disabled", false);
+   //    }
+   // });
+
+   //  $("#guestList").keyup(function(){
+   //    if($("#guestList").val().length < 1 
+   //      ){
+   //      $("#guestListAlert").html("Start time cannot be blank");
+   //      $("button").prop("disabled", true);
+   //    } else {
+   //      $("#guestListAlert").html(" ");
+   //      $("button").prop("disabled", false);
+   //    }
+   // });
+
+    $("input").keyup(function(){
+          if($("#event").val().length < 1 | 
         $("#eventType").val().length  < 1 | 
         $("#eventHost").val().length < 1 |
         $("#startTime").val().length < 1 |
@@ -16,9 +86,9 @@ $(document).ready(function(){
         $("#alert").html(" ");
         $("button").prop("disabled", false);
       }
+    })
 
 
-   });
 
     $("#createEventButton").click(function(event){
         event.preventDefault();

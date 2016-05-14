@@ -1,11 +1,21 @@
-.title,
+.title {
+	margin: auto;
+    width: 60%;
+    font-weight: bold;
+}
+
+#nameAlert, 
+#passwordAlert, 
+#emailAlert,
 #alert {
 	margin: auto;
     width: 60%;
+	color:red;
 }
-
 
 
 body {
 	padding: 20px;
 }
+
+

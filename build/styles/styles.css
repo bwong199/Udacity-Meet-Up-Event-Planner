@@ -1,1 +1,1 @@
-#alert,.title{margin:auto;width:60%}body{padding:20px}
+.title{margin:auto;width:60%;font-weight:700}#alert,#emailAlert,#nameAlert,#passwordAlert{margin:auto;width:60%;color:red}body{padding:20px}
