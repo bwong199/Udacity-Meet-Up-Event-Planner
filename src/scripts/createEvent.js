@@ -72,16 +72,18 @@ $(document).ready(function(){
    // });
 
     $("input").keyup(function(){
-          if($("#event").val().length < 1 | 
-        $("#eventType").val().length  < 1 | 
-        $("#eventHost").val().length < 1 |
-        $("#startTime").val().length < 1 |
-        $("#endTime").val().length < 1 |
-        $("#guestList").val().length < 1 |
-        $("#location").val().length < 1 
-        ){
-        $("#alert").html("All fields must be filled");
-        $("button").prop("disabled", true);
+        if($("#event").val().length < 1 | 
+          $("#eventType").val().length  < 1 | 
+          $("#eventHost").val().length < 1 |
+          $("#startTime").val().length < 1 |
+          $("#startDate").val().length < 1 |
+          $("#endDate").val().length < 1 |
+          $("#endTime").val().length < 1 |
+          $("#guestList").val().length < 1 |
+          $("#location").val().length < 1 
+          ){
+          $("#alert").html("All fields must be filled");
+          $("button").prop("disabled", true);
       } else {
         $("#alert").html(" ");
         $("button").prop("disabled", false);
@@ -100,6 +102,7 @@ $(document).ready(function(){
         var endTime = $('#endTime').val();
         var guestList = $('#guestList').val();
         var location = $('#location').val();
+        var guestMessage = $('#guestMessage').val();
         console.log(event + eventType + eventHost + startTime + endTime + guestList + location);
       // // Login Users
       
@@ -110,7 +113,8 @@ $(document).ready(function(){
           startTime: startTime, 
           endTime: endTime, 
           guestList: guestList, 
-          location: location
+          location: location, 
+          guestMessage: guestMessage
         });
 
         window.location.href="events.html";

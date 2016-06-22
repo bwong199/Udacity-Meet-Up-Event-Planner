@@ -26,8 +26,8 @@ $(document).ready(function(){
       });
 
       $("#pwd").keyup(function(){
-        if($("#pwd").val().length < 7 ){
-          $("#passwordAlert").html("Password field must have more than 8 characters");
+        if($("#pwd").val().length < 1 ){
+          $("#passwordAlert").html("Password field cannot be empty");
           $("button").prop("disabled", true);
         } else {
           $("#passwordAlert").html(" ");
@@ -65,6 +65,7 @@ $(document).ready(function(){
         var name = $('#name').val();
         var pwd = $('#pwd').val();
         var email = $('#email').val();
+        var bio = $('#bio').val();
         console.log(name + email + pwd);
 		// Create Users
     	myFirebaseRef.createUser({
@@ -82,7 +83,8 @@ $(document).ready(function(){
 		   	myFirebaseRef.child("users").push({
 	              name: name,
 	              password: pwd,
-	              email: email
+	              email: email, 
+                biography: bio
 	        });
 
 	        alert("Successfully created user account with uid:" + userData.uid);
