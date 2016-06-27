@@ -71,31 +71,17 @@
         </div>
       </div>
       <div class="form-group">
-        <label class="control-label col-sm-2" for="startDate">Start Date:</label>
+        <label class="control-label col-sm-2" for="startDate">Start Date and Time:</label>
         <div class="col-sm-10"> 
           <p id="startDateAlert"> </p> 
-          <input type="date" class="form-control" id="startDate" placeholder="Enter event starting date" required />
+          <input type="datetime-local" class="form-control" id="startDate" placeholder="Enter event starting date" required />
         </div>
       </div>
       <div class="form-group">
-        <label class="control-label col-sm-2" for="startTime">Start Time:</label>
-        <div class="col-sm-10"> 
-          <p id="startTimeAlert"> </p> 
-          <input type="time" class="form-control" id="startTime" placeholder="Enter event starting time" required />
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="endDate">End Date:</label>
+        <label class="control-label col-sm-2" for="endDate">End Date and Time:</label>
         <div class="col-sm-10"> 
           <p id="endDateAlert"> </p> 
-          <input type="date" class="form-control" id="endDate" placeholder="Enter event ending date" required />
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="endTime">End Time:</label>
-        <div class="col-sm-10"> 
-          <p id="endTimeAlert"> </p> 
-          <input type="time" class="form-control" id="endTime" placeholder="Enter event ending time" required />
+          <input type="datetime-local" class="form-control" id="endDate" placeholder="Enter event ending date" required />
         </div>
       </div>
       <div class="form-group">
@@ -108,6 +94,7 @@
       <div class="form-group">
         <label class="control-label col-sm-2" for="location">Location</label>
         <div class="col-sm-10"> 
+          <p id="locationAlert"> </p> 
           <input type="text" class="form-control" id="location" placeholder="Enter location" required list="locations" />
           <datalist id="locations">
             <option values="Vancouver">Vancouver</option> 
@@ -119,7 +106,8 @@
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="guestMessage">Guest Message:</label>
-        <div class="col-sm-10">          
+        <div class="col-sm-10">
+          <p id="guestMessageAlert"> </p>           
           <textarea class="form-control" rows="5" id="guestMessage"></textarea>
         </div>
       </div>

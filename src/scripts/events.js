@@ -11,8 +11,8 @@
               "<td>" + data[x]["event"] + "</td>" + 
               "<td>" + data[x]["eventType"] + "</td>" + 
               "<td>" + data[x]["eventHost"] + "</td>" + 
-              "<td>" + data[x]["startTime"] + "</td>" + 
-              "<td>" + data[x]["endTime"] + "</td>" + 
+              "<td>" + data[x]["startDate"] + "</td>" + 
+              "<td>" + data[x]["endDate"] + "</td>" + 
               "<td>" + data[x]["guestList"] + "</td>" + 
               "<td>" + data[x]["location"] + "</td>" + 
             "</tr>"

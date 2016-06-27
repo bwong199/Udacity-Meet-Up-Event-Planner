@@ -16,8 +16,8 @@ $(document).ready(function(){
 
 
       $("#name").keyup(function(){
-        if($("#name").val().length < 5){
-          $("#nameAlert").html("Name field must have more than 4 characters");
+        if($("#name").val().length < 1){
+          $("#nameAlert").html("Name field must not be empty");
           $("button").prop("disabled", true);
         } else {
           $("#nameAlert").html(" ");
@@ -47,8 +47,8 @@ $(document).ready(function(){
       }
 
       $("#email").keyup(function(){
-        if(!validateEmail($('#email').val()) || $("#email").val().length < 9   ){
-          $("#emailAlert").html("Email is not valid and/or is less than 8 characters");
+        if(!validateEmail($('#email').val()) || $("#email").val().length < 1   ){
+          $("#emailAlert").html("Email is not valid and/or is empty");
           $("button").prop("disabled", true);
         } else {
           $("#emailAlert").html(" ");
