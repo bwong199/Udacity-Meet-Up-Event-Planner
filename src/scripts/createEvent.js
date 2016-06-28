@@ -96,18 +96,18 @@ $(document).ready(function(){
       }
    });
 
-    $("#guestMessage").keyup(function(){
-      if($("#guestMessage").val().length < 1 
-        ){
-        $("#guestMessageAlert").addClass("alert alert-danger");
-        $("#guestMessageAlert").html("Guest message cannot be blank");
-        $("button").prop("disabled", true);
-      } else {
-        $("#guestMessageAlert").removeClass("alert alert-danger");
-        $("#guestMessageAlert").html(" ");
-        $("button").prop("disabled", false);
-      }
-   });
+   //  $("#guestMessage").keyup(function(){
+   //    if($("#guestMessage").val().length < 1 
+   //      ){
+   //      $("#guestMessageAlert").addClass("alert alert-danger");
+   //      $("#guestMessageAlert").html("Guest message cannot be blank");
+   //      $("button").prop("disabled", true);
+   //    } else {
+   //      $("#guestMessageAlert").removeClass("alert alert-danger");
+   //      $("#guestMessageAlert").html(" ");
+   //      $("button").prop("disabled", false);
+   //    }
+   // });
 
     // $("input").keyup(function(){
     //     if($("#event").val().length < 1 | 
