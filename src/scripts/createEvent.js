@@ -8,9 +8,11 @@ $(document).ready(function(){
    $("#event").keyup(function(){
       if($("#event").val().length < 1 
         ){
+        $("#eventAlert").addClass("alert alert-danger");
         $("#eventAlert").html("Event name cannot be blank");
         $("button").prop("disabled", true);
       } else {
+        $("#eventAlert").removeClass("alert alert-danger");
         $("#eventAlert").html(" ");
         $("button").prop("disabled", false);
       }
@@ -19,9 +21,11 @@ $(document).ready(function(){
     $("#eventType").keyup(function(){
       if($("#eventType").val().length < 1 
         ){
+        $("#eventTypeAlert").addClass("alert alert-danger");
         $("#eventTypeAlert").html("Event Type cannot be blank");
         $("button").prop("disabled", true);
       } else {
+        $("#eventTypeAlert").removeClass("alert alert-danger");
         $("#eventTypeAlert").html(" ");
         $("button").prop("disabled", false);
       }
@@ -30,9 +34,11 @@ $(document).ready(function(){
     $("#eventHost").keyup(function(){
       if($("#eventHost").val().length < 1 
         ){
+        $("#eventHostAlert").addClass("alert alert-danger");
         $("#eventHostAlert").html("Event Host cannot be blank");
         $("button").prop("disabled", true);
       } else {
+        $("#eventHostAlert").removeClass("alert alert-danger");
         $("#eventHostAlert").html(" ");
         $("button").prop("disabled", false);
       }
@@ -41,20 +47,24 @@ $(document).ready(function(){
     $("#startDate").keyup(function(){
       if($("#startTime").val().length < 1 
         ){
+        $("#startDateAlert").addClass("alert alert-danger");
         $("#startDateAlert").html("Start date and time cannot be blank");
         $("button").prop("disabled", true);
       } else {
+        $("#startDateAlert").removeClass("alert alert-danger");
         $("#startDateAlert").html(" ");
         $("button").prop("disabled", false);
       }
    });
 
     $("#endDate").keyup(function(){
-      if($("#endDate").val().length < 1 || $("#endDate").val() > $("#startDate").val()
+      if($("#endDate").val().length < 1 || $("#endDate").val() < $("#startDate").val()
         ){
+        $("#endDateAlert").addClass("alert alert-danger");
         $("#endDateAlert").html("Start date and time cannot be blank, and end time cannot be before start time.");
         $("button").prop("disabled", true);
       } else {
+        $("#endDateAlert").removeClass("alert alert-danger");
         $("#endDateAlert").html(" ");
         $("button").prop("disabled", false);
       }
@@ -63,9 +73,11 @@ $(document).ready(function(){
     $("#guestList").keyup(function(){
       if($("#guestList").val().length < 1 
         ){
+        $("#guestListAlert").addClass("alert alert-danger");
         $("#guestListAlert").html("Start time cannot be blank");
         $("button").prop("disabled", true);
       } else {
+        $("#guestListAlert").removeClass("alert alert-danger");
         $("#guestListAlert").html(" ");
         $("button").prop("disabled", false);
       }
@@ -74,9 +86,11 @@ $(document).ready(function(){
     $("#location").keyup(function(){
       if($("#location").val().length < 1 
         ){
+        $("#locationAlert").addClass("alert alert-danger");
         $("#locationAlert").html("Start time cannot be blank");
         $("button").prop("disabled", true);
       } else {
+        $("#locationAlert").removeClass("alert alert-danger");
         $("#locationAlert").html(" ");
         $("button").prop("disabled", false);
       }
@@ -85,9 +99,11 @@ $(document).ready(function(){
     $("#guestMessage").keyup(function(){
       if($("#guestMessage").val().length < 1 
         ){
+        $("#guestMessageAlert").addClass("alert alert-danger");
         $("#guestMessageAlert").html("Start time cannot be blank");
         $("button").prop("disabled", true);
       } else {
+        $("#guestMessageAlert").removeClass("alert alert-danger");
         $("#guestMessageAlert").html(" ");
         $("button").prop("disabled", false);
       }

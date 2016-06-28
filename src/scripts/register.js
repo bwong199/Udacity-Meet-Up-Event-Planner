@@ -26,8 +26,8 @@ $(document).ready(function(){
       });
 
       $("#pwd").keyup(function(){
-        if($("#pwd").val().length < 1 ){
-          $("#passwordAlert").html("Password field cannot be empty");
+        if($("#pwd").val().length < 7 ){
+          $("#passwordAlert").html("Password field must be at least 8 characters");
           $("button").prop("disabled", true);
         } else {
           $("#passwordAlert").html(" ");
