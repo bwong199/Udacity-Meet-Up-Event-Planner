@@ -100,7 +100,7 @@ $(document).ready(function(){
       if($("#guestMessage").val().length < 1 
         ){
         $("#guestMessageAlert").addClass("alert alert-danger");
-        $("#guestMessageAlert").html("Start time cannot be blank");
+        $("#guestMessageAlert").html("Guest message cannot be blank");
         $("button").prop("disabled", true);
       } else {
         $("#guestMessageAlert").removeClass("alert alert-danger");
